@@ -191,3 +191,17 @@
     -fx-background-color:#288472;
     -fx-padding: 30 10 10 10;
 }
+.role-name{
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #BC435C;
+}
+#mainContainer{
+    -fx-background-image: url(/img/img.jpg);
+}
+.new-theme{
+    -fx-background-color:#D8EEF3;
+}
+.new1-theme{
+    -fx-background-color: #43A7BC;
+}
