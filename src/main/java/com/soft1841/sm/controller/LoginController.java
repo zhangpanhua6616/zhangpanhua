@@ -1,7 +1,7 @@
 package com.soft1841.sm.controller;
 /**
  * 管理系统登录
- * @author 黄敬理
+ * @author 张攀华
  * date 2018-12-25
  */
 
