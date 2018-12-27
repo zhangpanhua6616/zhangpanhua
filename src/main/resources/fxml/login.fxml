@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="397.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.172-ea"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.LoginController">
-   <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="/img/img.jpg" />
       </image>
@@ -39,8 +39,8 @@
          <Font size="19.0" />
       </font>
    </Label>
-   <Button defaultButton="true" layoutX="244.0" layoutY="317.0" mnemonicParsing="false"
-           prefHeight="30.0" prefWidth="73.0" styleClass="blue-theme" stylesheets="/css/style.css" text="登录">
+   <Button defaultButton="true" layoutX="244.0" layoutY="300.0" mnemonicParsing="false"
+           prefHeight="3.0" prefWidth="73.0" styleClass="blue-theme" stylesheets="/css/style.css" text="登录" onAction="#login">
       <font>
          <Font size="16.0" />
       </font>
@@ -48,7 +48,7 @@
    <ImageView fitHeight="106.0" fitWidth="120.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
 
    </ImageView>
-   <Label layoutX="140.0" layoutY="49.0" prefHeight="44.0" text="超市收银界面" textFill="#5cc4d7">
+   <Label layoutX="160.0" layoutY="45.0" prefHeight="44.0" text="超市收银界面" textFill="#00ff00">
       <font>
          <Font size="34.0" />
       </font>
