@@ -78,6 +78,7 @@ public class AdminController implements Initializable {
             rightBox.setAlignment ( Pos.TOP_CENTER );
             Label nameLabel = new Label ( entity.getStr ( "name" ) );
             Label passwordLabel = new Label ( entity.getStr ( "password" ) );
+            Label numberLabel= new Label ( entity.getStr ( "number" ) );
 
             Button delBtn = new Button ( "删除" );
             delBtn.getStyleClass().add("warning-theme");
@@ -103,7 +104,7 @@ public class AdminController implements Initializable {
             delBtn.getStyleClass ().add ( "orange-theme" );
             delBtn.setPrefSize ( 80,50);
 
-            rightBox.getChildren().addAll(nameLabel,delBtn);
+            rightBox.getChildren().addAll(nameLabel,passwordLabel,numberLabel,delBtn);
             hBox.getChildren().add(leftBox);
             hBox.getChildren ().add ( rightBox );
             adminPane.getChildren ().add ( hBox );
@@ -127,12 +128,17 @@ public class AdminController implements Initializable {
         vBox.setSpacing(10);
         vBox.setPadding(new Insets(20,10,10,10));
         TextField nameField = new TextField("请输入姓名");
+        TextField avatarField = new TextField("请输入头像地址");
+        //邮箱输入框
+        TextField passwordField = new TextField("请输入密码");
+        //电话输入框
+        TextField numberField =  new TextField("请输入账户");
 
 
         //新增按钮
         Button addBtn = new Button("新增");
         addBtn.getStyleClass().add("blue-theme");
-        vBox.getChildren().addAll(nameField,addBtn);
+        vBox.getChildren().addAll(nameField,avatarField,passwordField,numberField,addBtn);
         Scene scene = new Scene(vBox,600,380);
         scene.getStylesheets().add("/css/style.css");
         stage.setScene(scene);
@@ -140,8 +146,15 @@ public class AdminController implements Initializable {
         //点击新增按钮，将界面数据封装成一个Reader对象，写入数据库
         addBtn.setOnAction(event ->{
             String nameString = nameField.getText().trim();
+            String avatarString = avatarField.getText().trim();
+            String passwordString = passwordField.getText().trim();
+            String numberString = numberField.getText().trim();
+            admin.setName(nameString);
+            admin.setAvatar(avatarString);
+            admin.setPassword(passwordString);
+            admin.setNumber(numberString);
 
-            System.out.println(admin.getName()+admin);
+            System.out.println(admin.getName()+admin.getAvatar()+admin.getPassword()+admin.getNumber());
             try {
                 adminDAO.insertAdmin(admin);
             } catch (SQLException e) {

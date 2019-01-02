@@ -23,7 +23,7 @@ public class LoginController {
     public void login() throws Exception {
         String account = accountField.getText().trim();
         String password = passwordField.getText().trim();
-        if ("123456".equals(account) && "123456".equals(password)) {
+        if ("123".equals(account) && "123".equals(password)) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("提示");
             alert.setContentText("登录成功!");
